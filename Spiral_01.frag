@@ -5,7 +5,7 @@
 precision mediump float;
 #endif
 
-//#define USE_SMOOTH
+#define USE_SMOOTH
 #define M_PI 3.14159265358979
 #define M_2PI 6.28318530717958
 #define RADIUS .25
@@ -47,5 +47,5 @@ void mainImage( out vec4 O, vec2 U ) {
                    vec3(1.0,1.0,1.0),
                    vec3(0.0,0.33,0.67) );
     
-    O = vec4(col * smoothstep(1.7, .19, dist), 1.);
+    O = vec4(col * smoothstep(0.81, .8, dist), 1.);
 }
